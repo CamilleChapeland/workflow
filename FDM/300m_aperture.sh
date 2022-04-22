@@ -10,7 +10,7 @@ flef=`expr $fmin + 300`
 frig=`expr $fmax - 300`
 
 # for modeling
-nt=2200
+nt=1250
 dt=0.00008
 xsrc1=400
 xsrc2=700
