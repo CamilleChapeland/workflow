@@ -1,0 +1,2930 @@
+... pc_outfile_image = Results/fugro_model/fd_jmi_inverted_image.su
+... pc_outfile_velocity = Results/fugro_model/fd_jmi_inverted_velocity.su
+... pc_outfile_misfit = Results/fugro_model/fd_jmi_misfit.su
+... pc_initvel = Data/fugro_model/vel0.su
+... pc_data = Data/fugro_model/data.su
+... pc_source = Data/fugro_model/sources.su
+... velocity_update_iter_jump = 2
+... reflectivity_const_weight = 0.900000
+... output_pershot_info = 0
+... output_residual_info = 1
+... if_model_mask = 0 meaning no mask applied 
+... fmin = 150.000000
+... fmax_lower = 200.000000
+... fmax_upper = 650.000000
+... operator_vmin = 1300.000000
+... operator_vmax = 3500.000000
+... operator_dv = 1.000000
+... dt = 0.000080
+... dx = 2.000000
+... dz = 0.400000
+... size_x = 151
+... size_xtap = 75
+... size_z = 201
+... size_t = 2200
+... size_src = 151
+... angle = 80.000000
+... iter_multfreq_range = 10
+... size_iter = [ 25 25 25 25 25 25 25 25 25 25 ]
+... data_mask_type = 1
+... size_x2 = 301
+... size_x2pow2 = 302
+... size_zplus1 = 202
+... size_f = 1101
+... df = 5.681818
+... index_fmin = 26
+... index_fmax_lower = 35
+... index_fmax_upper = 114
+... size_srcx = 22801
+... size_srcx2 = 45451
+... index_operator_vmin = 1301
+... index_operator_vmax = 3501
+... validsize_f = 89
+... validsize_v = 2201
+... itertotal = 250
+... velocity_smooth_z = 1
+... velocity_smooth_x = 1
+... velocity_smooth_N = 1
+... illummatrix_smooth_z = 3
+... illummatrix_smooth_x = 3
+... illummatrix_smooth_N = 3
+
+Joint migration inversion starts from now on:
+input initial_velocity from file Data/fugro_model/vel0.su is read in successfully, nz = 201, nx = 151, dz = 0.400000, dx = 2.000000
+input source from file Data/fugro_model/sources.su is read in successfully, nt = 2200, nfeval = 89, nx = 151, dt = 0.000080, dx = 2.000000
+input data from file Data/fugro_model/data.su is read in successfully, nt = 2200, nfeval = 89, nx = 151, dt = 0.000080, dx = 2.000000
+..Nslice=8, Nslice_tmp=1
+..iter=0, current_fmax=200.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=1
+..iter=1, current_fmax=200.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=1
+..iter=2, current_fmax=200.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=1
+..iter=3, current_fmax=200.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=1
+..iter=4, current_fmax=200.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=1
+..iter=5, current_fmax=200.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=1
+..iter=6, current_fmax=200.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=1
+..iter=7, current_fmax=200.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=1
+..iter=8, current_fmax=200.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=1
+..iter=9, current_fmax=200.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=1
+..iter=10, current_fmax=200.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=1
+..iter=11, current_fmax=200.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=1
+..iter=12, current_fmax=200.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=1
+..iter=13, current_fmax=200.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=1
+..iter=14, current_fmax=200.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=1
+..iter=15, current_fmax=200.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=1
+..iter=16, current_fmax=200.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=1
+..iter=17, current_fmax=200.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=1
+..iter=18, current_fmax=200.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=1
+..iter=19, current_fmax=200.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=1
+..iter=20, current_fmax=200.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=1
+..iter=21, current_fmax=200.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=1
+..iter=22, current_fmax=200.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=1
+..iter=23, current_fmax=200.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=1
+..iter=24, current_fmax=200.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=2
+..iter=25, current_fmax=250.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=2
+..iter=26, current_fmax=250.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=2
+..iter=27, current_fmax=250.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=2
+..iter=28, current_fmax=250.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=2
+..iter=29, current_fmax=250.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=2
+..iter=30, current_fmax=250.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=2
+..iter=31, current_fmax=250.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=2
+..iter=32, current_fmax=250.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=2
+..iter=33, current_fmax=250.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=2
+..iter=34, current_fmax=250.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=2
+..iter=35, current_fmax=250.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=2
+..iter=36, current_fmax=250.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=2
+..iter=37, current_fmax=250.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=2
+..iter=38, current_fmax=250.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=2
+..iter=39, current_fmax=250.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=2
+..iter=40, current_fmax=250.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=2
+..iter=41, current_fmax=250.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=2
+..iter=42, current_fmax=250.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=2
+..iter=43, current_fmax=250.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=2
+..iter=44, current_fmax=250.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=2
+..iter=45, current_fmax=250.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=2
+..iter=46, current_fmax=250.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=2
+..iter=47, current_fmax=250.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=2
+..iter=48, current_fmax=250.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=2
+..iter=49, current_fmax=250.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=3
+..iter=50, current_fmax=300.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=3
+..iter=51, current_fmax=300.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=3
+..iter=52, current_fmax=300.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=3
+..iter=53, current_fmax=300.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=3
+..iter=54, current_fmax=300.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=3
+..iter=55, current_fmax=300.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=3
+..iter=56, current_fmax=300.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=3
+..iter=57, current_fmax=300.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=3
+..iter=58, current_fmax=300.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=3
+..iter=59, current_fmax=300.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=3
+..iter=60, current_fmax=300.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=3
+..iter=61, current_fmax=300.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=3
+..iter=62, current_fmax=300.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=3
+..iter=63, current_fmax=300.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=3
+..iter=64, current_fmax=300.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=3
+..iter=65, current_fmax=300.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=3
+..iter=66, current_fmax=300.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=3
+..iter=67, current_fmax=300.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=3
+..iter=68, current_fmax=300.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=3
+..iter=69, current_fmax=300.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=3
+..iter=70, current_fmax=300.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=3
+..iter=71, current_fmax=300.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=3
+..iter=72, current_fmax=300.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=3
+..iter=73, current_fmax=300.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=3
+..iter=74, current_fmax=300.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=4
+..iter=75, current_fmax=350.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=4
+..iter=76, current_fmax=350.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=4
+..iter=77, current_fmax=350.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=4
+..iter=78, current_fmax=350.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=4
+..iter=79, current_fmax=350.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=4
+..iter=80, current_fmax=350.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=4
+..iter=81, current_fmax=350.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=4
+..iter=82, current_fmax=350.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=4
+..iter=83, current_fmax=350.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=4
+..iter=84, current_fmax=350.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=4
+..iter=85, current_fmax=350.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=4
+..iter=86, current_fmax=350.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=4
+..iter=87, current_fmax=350.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=4
+..iter=88, current_fmax=350.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=4
+..iter=89, current_fmax=350.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=4
+..iter=90, current_fmax=350.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=4
+..iter=91, current_fmax=350.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=4
+..iter=92, current_fmax=350.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=4
+..iter=93, current_fmax=350.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=4
+..iter=94, current_fmax=350.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=4
+..iter=95, current_fmax=350.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=4
+..iter=96, current_fmax=350.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=4
+..iter=97, current_fmax=350.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=4
+..iter=98, current_fmax=350.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=4
+..iter=99, current_fmax=350.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=4
+..iter=100, current_fmax=400.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=4
+..iter=101, current_fmax=400.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=4
+..iter=102, current_fmax=400.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=4
+..iter=103, current_fmax=400.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=4
+..iter=104, current_fmax=400.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=4
+..iter=105, current_fmax=400.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=4
+..iter=106, current_fmax=400.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=4
+..iter=107, current_fmax=400.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=4
+..iter=108, current_fmax=400.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=4
+..iter=109, current_fmax=400.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=4
+..iter=110, current_fmax=400.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=4
+..iter=111, current_fmax=400.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=4
+..iter=112, current_fmax=400.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=4
+..iter=113, current_fmax=400.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=4
+..iter=114, current_fmax=400.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=4
+..iter=115, current_fmax=400.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=4
+..iter=116, current_fmax=400.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=4
+..iter=117, current_fmax=400.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=4
+..iter=118, current_fmax=400.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=4
+..iter=119, current_fmax=400.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=4
+..iter=120, current_fmax=400.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=4
+..iter=121, current_fmax=400.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=4
+..iter=122, current_fmax=400.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=4
+..iter=123, current_fmax=400.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=4
+..iter=124, current_fmax=400.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=5
+..iter=125, current_fmax=450.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=5
+..iter=126, current_fmax=450.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=5
+..iter=127, current_fmax=450.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=5
+..iter=128, current_fmax=450.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=5
+..iter=129, current_fmax=450.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=5
+..iter=130, current_fmax=450.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=5
+..iter=131, current_fmax=450.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=5
+..iter=132, current_fmax=450.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=5
+..iter=133, current_fmax=450.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=5
+..iter=134, current_fmax=450.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=5
+..iter=135, current_fmax=450.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=5
+..iter=136, current_fmax=450.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=5
+..iter=137, current_fmax=450.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=5
+..iter=138, current_fmax=450.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=5
+..iter=139, current_fmax=450.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=5
+..iter=140, current_fmax=450.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=5
+..iter=141, current_fmax=450.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=5
+..iter=142, current_fmax=450.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=5
+..iter=143, current_fmax=450.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=5
+..iter=144, current_fmax=450.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=5
+..iter=145, current_fmax=450.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=5
+..iter=146, current_fmax=450.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=5
+..iter=147, current_fmax=450.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=5
+..iter=148, current_fmax=450.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=5
+..iter=149, current_fmax=450.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=6
+..iter=150, current_fmax=500.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=6
+..iter=151, current_fmax=500.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=6
+..iter=152, current_fmax=500.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=6
+..iter=153, current_fmax=500.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=6
+..iter=154, current_fmax=500.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=6
+..iter=155, current_fmax=500.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=6
+..iter=156, current_fmax=500.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=6
+..iter=157, current_fmax=500.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=6
+..iter=158, current_fmax=500.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=6
+..iter=159, current_fmax=500.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=6
+..iter=160, current_fmax=500.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=6
+..iter=161, current_fmax=500.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=6
+..iter=162, current_fmax=500.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=6
+..iter=163, current_fmax=500.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=6
+..iter=164, current_fmax=500.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=6
+..iter=165, current_fmax=500.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=6
+..iter=166, current_fmax=500.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=6
+..iter=167, current_fmax=500.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=6
+..iter=168, current_fmax=500.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=6
+..iter=169, current_fmax=500.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=6
+..iter=170, current_fmax=500.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=6
+..iter=171, current_fmax=500.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=6
+..iter=172, current_fmax=500.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=6
+..iter=173, current_fmax=500.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=6
+..iter=174, current_fmax=500.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=6
+..iter=175, current_fmax=550.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=6
+..iter=176, current_fmax=550.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=6
+..iter=177, current_fmax=550.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=6
+..iter=178, current_fmax=550.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=6
+..iter=179, current_fmax=550.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=6
+..iter=180, current_fmax=550.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=6
+..iter=181, current_fmax=550.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=6
+..iter=182, current_fmax=550.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=6
+..iter=183, current_fmax=550.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=6
+..iter=184, current_fmax=550.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=6
+..iter=185, current_fmax=550.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=6
+..iter=186, current_fmax=550.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=6
+..iter=187, current_fmax=550.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=6
+..iter=188, current_fmax=550.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=6
+..iter=189, current_fmax=550.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=6
+..iter=190, current_fmax=550.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=6
+..iter=191, current_fmax=550.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=6
+..iter=192, current_fmax=550.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=6
+..iter=193, current_fmax=550.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=6
+..iter=194, current_fmax=550.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=6
+..iter=195, current_fmax=550.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=6
+..iter=196, current_fmax=550.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=6
+..iter=197, current_fmax=550.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=6
+..iter=198, current_fmax=550.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=6
+..iter=199, current_fmax=550.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=7
+..iter=200, current_fmax=600.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=7
+..iter=201, current_fmax=600.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=7
+..iter=202, current_fmax=600.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=7
+..iter=203, current_fmax=600.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=7
+..iter=204, current_fmax=600.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=7
+..iter=205, current_fmax=600.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=7
+..iter=206, current_fmax=600.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=7
+..iter=207, current_fmax=600.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=7
+..iter=208, current_fmax=600.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=7
+..iter=209, current_fmax=600.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=7
+..iter=210, current_fmax=600.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=7
+..iter=211, current_fmax=600.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=7
+..iter=212, current_fmax=600.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=7
+..iter=213, current_fmax=600.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=7
+..iter=214, current_fmax=600.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=7
+..iter=215, current_fmax=600.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=7
+..iter=216, current_fmax=600.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=7
+..iter=217, current_fmax=600.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=7
+..iter=218, current_fmax=600.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=7
+..iter=219, current_fmax=600.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=7
+..iter=220, current_fmax=600.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=7
+..iter=221, current_fmax=600.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=7
+..iter=222, current_fmax=600.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=7
+..iter=223, current_fmax=600.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=7
+..iter=224, current_fmax=600.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=8
+..iter=225, current_fmax=650.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=8
+..iter=226, current_fmax=650.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=8
+..iter=227, current_fmax=650.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=8
+..iter=228, current_fmax=650.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=8
+..iter=229, current_fmax=650.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=8
+..iter=230, current_fmax=650.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=8
+..iter=231, current_fmax=650.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=8
+..iter=232, current_fmax=650.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=8
+..iter=233, current_fmax=650.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=8
+..iter=234, current_fmax=650.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=8
+..iter=235, current_fmax=650.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=8
+..iter=236, current_fmax=650.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=8
+..iter=237, current_fmax=650.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=8
+..iter=238, current_fmax=650.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=8
+..iter=239, current_fmax=650.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=8
+..iter=240, current_fmax=650.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=8
+..iter=241, current_fmax=650.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=8
+..iter=242, current_fmax=650.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=8
+..iter=243, current_fmax=650.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=8
+..iter=244, current_fmax=650.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=8
+..iter=245, current_fmax=650.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=8
+..iter=246, current_fmax=650.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=8
+..iter=247, current_fmax=650.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE
+..Nslice=8, Nslice_tmp=8
+..iter=248, current_fmax=650.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+..Nslice=8, Nslice_tmp=8
+..iter=249, current_fmax=650.000000
+....IMAGING:
+..........0. modeling
+..........1. calculate image gradient
+..........2. calculate wavefield perturbation due to image gradient
+..........3. calculate initial alpha
+....IMAGING IS DONE
+....VELOCITY INVERSION:
+......velocity inversion (only do it once per iteration):
+..........0. modeling
+..........1. calculate velocity gradient
+..........2. calculate wavefield perturbation due to velocity gradient
+..........3. calculate initial alpha
+....VELOCITY INVERSION IS DONE

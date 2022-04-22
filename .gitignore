@@ -1,0 +1,4 @@
+#ignore large files 
+Data/*/data*.su
+Data/*/source*.su
+
