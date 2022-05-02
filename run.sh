@@ -1,28 +1,31 @@
 #!/bin/bash
 
-cd main_2019 
+cd ../main_2019 
 cp Makefile_fwmod Makefile
 make remake
-cd ../
+cd ../workflow
+mkdir ../Data
+mkdir ../Results
+mkdir ../logs 
 
 #pick variables
 dx=0.4
 dz=0.4
 dxrcv=2
 dxsrc=2
-
 fmin=150
 fmax_lower=200
 fmax=600
 
-#pick directory name
+#pick subsurface model to run
+#the model executables must be stored in the ../models/ directory 
 dir=fugro_model
 
 #pick whether to make synthetic subsurface model
-remodel=1
+remodel=0
 
 #pick whether to remake FDM data
-remakedata=1
+remakedata=0
 
 #pick whether to run the full workflow
 workflow=1
@@ -34,15 +37,12 @@ fwi=1
 #pick whether to run FDM component
 fwm=0
 
-
-
-
 #####################################################################
 #####################################################################
 #make dataset if necessary
 #create subsurface model
 if [ $remodel -gt 0 ]; then
-./models/$dir'.sh' $dx $dz $dxrcv $dir
+../models/$dir'.sh' $dx $dz $dxrcv $dir
 echo ----------------- Full subsurface model is generated  -----------------
 else 
 echo ----------------- Re-using subsurface model -----------------
@@ -62,47 +62,49 @@ fi
 if [ $workflow -gt 0 ]; then
 
 #begin workflow
-cd main_2019
+cd ../main_2019
 cp Makefile_jmi Makefile
 make remake
-cd ../
-mkdir Results/$dir
+cd ../workflow
+mkdir ../Results/$dir
 
 #run JMI
 if [ $jmi -gt 0 ]; then
 echo  ----------------- Running joint migration inversion -----------------
-./JMI/FD-JMI.sh $dir $dxrcv $dxsrc $fmin $fmax $fmax_lower $dz 
-./JMI/plot_results.sh $dir
+./JMI/FD-JMI.sh $mod_dir $dir $dxrcv $dxsrc $fmin $fmax $fmax_lower $dz 
+#./JMI/plot_results.sh $dir
 else 
-cat  Results/$dir/fd_jmi_final_inverted_velocity.su  $mod_dir/vel0.su $mod_dir/truvel.su | \
-suwind key=duse max=1 dt=1 | \
-suximage wbox=2000 hbox=400 legend=1 cmap=hsv2 title="Velocity estimate comparaison : FWI only, JMI+FWI,tTrue vel, starting vel" &
 echo ----------------- Re-using JMI results -----------------
 fi
+
+cat Results/$dir/fd_jmi_final_inverted_velocity.su  ../$mod_dir/vel0.su ../$mod_dir/truvel.su | \
+suwind key=duse max=1 dt=1 | \
+suximage wbox=2000 hbox=400 legend=1 cmap=hsv2 title="Velocity estimate from JMI (left), starting model (middle) and true velocity model (right)" &
 
 #convert files
 echo  ----------------- Converting files to bin -----------------
 sustrip < Results/$dir/fd_jmi_final_inverted_velocity.su > jmi_vel.bin
-sustrip < $mod_dir/truvel.su head=data.head > truvel.bin
-sustrip < $mod_dir/vel0hom.su > vel0.bin
+sustrip < ../$mod_dir/truvel.su head=data.head > truvel.bin
+sustrip < ../$mod_dir/vel0.su > vel0.bin
 
 #run FWI
 if [ $fwi -gt 0 ]; then
 echo  ----------------- Running full waveform inversion -----------------
 python3 FWI/FWI.py $dir $fmin $fmax $dxrcv $dz 
-python3 FWI/FWI_smooth.py $dir $fmin $fmax $dxrcv $dz
+#python3 FWI/FWI_smooth.py $dir $fmin $fmax $dxrcv $dz
 else 
 echo  ----------------- Re-using FWI results -----------------
 fi
+
 #convert files
 echo  ----------------- Converting files to su -----------------
 python3 np2su.py $dir $fmin
 supaste < JMI+FWI-vel.bin ns=201 head=data.head > Results/$dir/$fmin-JMI+FWI-vel.su   
 supaste < FWIonly-vel.bin ns=201 head=data.head > Results/$dir/$fmin-FWIonly-vel.su   
 
-cat  Results/$dir/$fmin-FWIonly-vel.su  Results/$dir/$fmin-JMI+FWI-vel.su $mod_dir/vel0.su $mod_dir/truvel.su | \
+cat  Results/$dir/$fmin-FWIonly-vel.su  Results/$dir/$fmin-JMI+FWI-vel.su ../$mod_dir/vel0.su ../$mod_dir/truvel.su | \
 suwind key=duse max=1 dt=1 | \
-suximage wbox=2000 hbox=400 legend=1 cmap=hsv2 title="Velocity estimate comparaison : FWI only, JMI+FWI,tTrue vel, starting vel" &
+suximage wbox=2000 hbox=400 legend=1 cmap=hsv2 title="Velocity estimate comparaison : FWI only, JMI+FWI, starting velocity model and true velocity model" &
 
 
 #run FWM

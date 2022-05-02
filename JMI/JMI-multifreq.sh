@@ -1,21 +1,19 @@
 #!/bin/sh
 
-
-#size_iter=50 \
 # run the actual JMI
 mpirun -n 12 jmi_2d_mpi \
     initial_velocity=../$1/vel0.su \
     data=../$1/data.su \
     source=../$1/sources.su \
-    outfile_label=$2/fd_jmi \
-    velocity_update_iter_jump=3 \
+    outfile_label=fd_jmi \
+    velocity_update_iter_jump=10 \
     reflectivity_const_weight=0.9 \
     output_pershot_info=0 \
     output_residual_info=1 \
     if_model_mask=0 \
     fmin=150 \
     fmax_lower=200 \
-    fmax_upper=600\
+    fmax_upper=500\
     operator_vmin=1300 \
     operator_vmax=3000 \
     operator_dv=1 \
