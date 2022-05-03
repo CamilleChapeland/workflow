@@ -3,8 +3,8 @@
 # define the number of samples, fmin, fmax and dt
 ntwav=1500
 dtwav=0.00008
-fmin=100
-fmax=700
+fmin=`expr $4 - 50`
+fmax=`expr $5 + 50`
 t0=0.013
 flef=`expr $fmin + 300`
 frig=`expr $fmax - 300`
@@ -21,12 +21,6 @@ rcv2=700
 minoff=-300
 maxoff=300
 
-inc=`ddiv $dxsrc $dxrcv`
-inc=`dnint $inc`
-
-#=========================================================================
-# create the time wavelet; shift is needed to make it causal
-#=========================================================================
 makewave w=fw fmin=$fmin flef=$flef frig=$frig fmax=$fmax nt=$ntwav dt=$dtwav t0=$t0 > ../$1/wavelet_fdacmod.su
 
 # display the wavelet

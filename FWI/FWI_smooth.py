@@ -9,6 +9,7 @@ configuration['log-level'] = 'WARNING'
 import argparse
 
 parser = argparse.ArgumentParser()
+parser.add_argument('starting_model', type=str)
 parser.add_argument('rdir', type=str)
 parser.add_argument('min_freq', type=float)
 parser.add_argument('max_freq', type=float)
@@ -20,7 +21,7 @@ args = parser.parse_args()
 ######################### MAKE PARAMETERS #########################
 nshots = 151  # Number of shots to create gradient from
 nreceivers = 151  # Number of receiver locations per shot
-fwi_iterations = 10  # Number of outer FWI iterations
+fwi_iterations = 15  # Number of outer FWI iterations
 min_freq = args.min_freq
 max_freq = args.max_freq
 dx = args.dx
@@ -43,7 +44,7 @@ tru_vel = np.fromfile('truvel.bin', dtype=np.float32)
 tru_vel = np.reshape(tru_vel , (151,201))
 v = tru_vel[:shape[0], :shape[1]]/1000
 
-start_modelsm = np.fromfile('vel0.bin', dtype=np.float32)
+start_modelsm = np.fromfile(args.starting_model+'.bin', dtype=np.float32)
 start_modelsm = np.reshape(start_modelsm, (151,201))
 smooth_v = start_modelsm[:shape[0], :shape[1]]/1000
 
@@ -226,11 +227,11 @@ for i in range(0, fwi_iterations):
     # Log the progress made
     print('Objective value is %f at iteration %d' % (phi, i+1))
 
-    np.save('Results/%s/FWIonly%s-vel_model%d'%(args.rdir, args.min_freq, i+1), model0.vp.data)
+    np.save('Results/%s/%s-vel_model%d'%(args.rdir, args.starting_model, i+1), model0.vp.data)
 
 ################################################################
 ######################### PLOT RESULTS #########################
-np.save('Results/%s/FWIonly%s-final_vel_model'%(args.rdir, args.min_freq), model0.vp.data)
+np.save('Results/%s/%s-final_vel_model'%(args.rdir, args.starting_model), model0.vp.data)
 
 # Plot objective function decrease
 plt.figure()
