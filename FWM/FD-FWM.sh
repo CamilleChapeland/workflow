@@ -7,15 +7,15 @@ mpirun -n 24 jmi_2d_mpi \
     initial_velocity=Results/$2/$1-final_vel_model.su \
     data=../Data/$2/data.su \
     source=../Data/$2/sources.su \
-    outfile_label=Results/$2/$1-fwm \
+    outfile_label=$2/$1-fwm \
     velocity_update_iter_jump=0 \
     output_pershot_info=1 \
     output_residual_info=1 \
     if_model_mask=0 \
-    fmin=$6 \
-    fmax_lower=$8 \
-    fmax_upper=$7 \
-    operator_vmin=1300 \
+    fmin=$5 \
+    fmax_lower=$7 \
+    fmax_upper=$6 \
+    operator_vmin=400 \
     operator_vmax=3000 \
     operator_dv=1 \
     dt=0.00008 \
@@ -34,6 +34,6 @@ mpirun -n 24 jmi_2d_mpi \
     velocity_smooth_N=1 \
     illummatrix_smooth_z=1 \
     illummatrix_smooth_x=1 \
-    illummatrix_smooth_N=1 >& ../logs/log_fd_fwmig
+    illummatrix_smooth_N=1 >& ../logs/$2/log_fd_fwmig
 
 exit

@@ -2,7 +2,6 @@ import numpy as np
 import scipy as sp
 import matplotlib.pyplot as plt
 import matplotlib
-#matplotlib.use('Qt5Agg')
 import devito
 from devito import configuration
 configuration['log-level'] = 'WARNING'
@@ -21,7 +20,7 @@ args = parser.parse_args()
 ######################### MAKE PARAMETERS #########################
 nshots = 151  # Number of shots to create gradient from
 nreceivers = 151  # Number of receiver locations per shot
-fwi_iterations = 15  # Number of outer FWI iterations
+fwi_iterations = 10  # Number of outer FWI iterations
 min_freq = args.min_freq
 max_freq = args.max_freq
 dx = args.dx
@@ -63,11 +62,12 @@ t0 = 0.
 tn = 128. 
 f0 = 0.2
 source_type = "Ricker"
-dt = model.critical_dt
+dt = model.critical_dt/1000
 a = 1
 fc = args.min_freq/1000
 fs = 1/dt
-print(fs)
+print(dt)
+
 ############################################################################
 ######################### MAKE AQUISITION GEOMETRY #########################
 # Define acquisition geometry: source
@@ -101,7 +101,6 @@ from examples.seismic import plot_shotrecord
 
 solver = AcousticWaveSolver(model, geometry, space_order=4)
 true_d, _, _ = solver.forward(vp=model.vp)
-print(true_d.shape)
 ##                                                                       ##
 ##                                                                       ##
 ###########################################################################

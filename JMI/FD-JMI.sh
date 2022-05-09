@@ -1,10 +1,9 @@
 #!/bin/sh
+mkdir ../logs/$2/
 
-
-#size_iter=50 \
 # run the actual JMI
 mpirun -n 12 jmi_2d_mpi \
-    initial_velocity=../$1/vel0.su \
+    initial_velocity=../$1/vel02.su \
     data=../$1/data.su \
     source=../$1/sources.su \
     outfile_label=$2/fd_jmi \
@@ -13,8 +12,8 @@ mpirun -n 12 jmi_2d_mpi \
     output_pershot_info=0 \
     output_residual_info=1 \
     if_model_mask=0 \
-    fmin=150 \
-    fmax_lower=200 \
+    fmin=200 \
+    fmax_lower=250 \
     fmax_upper=600\
     operator_vmin=1300 \
     operator_vmax=3000 \
@@ -31,9 +30,9 @@ mpirun -n 12 jmi_2d_mpi \
     size_iter=50,50,50,50,35,35,35,25,25,25\
     data_mask_type=1 \
     velocity_smooth_z=1 \
-    velocity_smooth_x=10 \
-    velocity_smooth_N=1 \
-    illummatrix_smooth_z=1 \
-    illummatrix_smooth_x=3 \
-    illummatrix_smooth_N=1 >& ../logs/log_fd_jmi
+    velocity_smooth_x=11 \
+    velocity_smooth_N=2 \
+    illummatrix_smooth_z=3 \
+    illummatrix_smooth_x=21 \
+    illummatrix_smooth_N=3 >& ../logs/$2/log_fd_jmi
 exit

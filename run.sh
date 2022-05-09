@@ -4,9 +4,6 @@ cd ../main_2019
 cp Makefile_fwmod Makefile
 make remake
 cd ../workflow
-mkdir ../Data
-mkdir ../Results
-mkdir ../logs 
 
 #####################################################################
 #################### SOME VARIABLES AND FILES #######################
@@ -23,28 +20,33 @@ fmax=600
 
 #pick subsurface model to run
 #the model executables must be stored in the ../models/ directory 
-dir=fugro_model
+#for dir in fugro_model inclusions_1 inclusions_2 karst_1 karst_2 karst_3 water_cave
+for dir in fugro_model
+do
+echo ==================== MODEL $dir =========================
 
+mkdir Results/$dir
+mkdir ../Data/$dir
 
 #####################################################################
 #################### SELECT WHICH EXECUTABLE ########################
 #####################################################################
 
 #pick whether to make synthetic subsurface model
-remodel=0
+remodel=1
 
 #pick whether to remake FDM data
-remakedata=0
+remakedata=1
 
 #pick whether to run the full workflow
 workflow=1
 
 #pick whether to run JMI component
-jmi=0
+jmi=1
 #pick whether to run FWI component
 fwi=1
 #pick whether to run FWM component
-fwm=0
+fwm=1
 
 #####################################################################
 ######################## MODEL AND DATA #############################
@@ -89,16 +91,16 @@ else
 echo ----------------- Re-using JMI results -----------------
 fi
 
-cat Results/$dir/fd_jmi_final_inverted_velocity.su  ../$mod_dir/vel0.su ../$mod_dir/truvel.su | \
+cat Results/$dir/fd_jmi_final_inverted_velocity.su  ../$mod_dir/vel02.su ../$mod_dir/truvel2.su | \
 suwind key=duse max=1 dt=1 | \
-suximage wbox=2000 hbox=100 legend=1 cmap=hsv2 title="Velocity estimate from JMI (left), starting model (middle) and true velocity model (right)" &
+suximage wbox=2000 hbox=200 legend=1 cmap=hsv2 title="Velocity estimate from JMI (left), starting model (middle) and true velocity model (right)" &
 
 ############################## FWI ##################################
 #convert files to npy
 echo  ----------------- Converting files to bin -----------------
 sustrip < Results/$dir/fd_jmi_final_inverted_velocity.su > jmi_vel.bin
-sustrip < ../$mod_dir/truvel.su head=data.head > truvel.bin
-sustrip < ../$mod_dir/vel0.su > vel0.bin
+sustrip < ../$mod_dir/truvel2.su head=data.head > truvel.bin
+sustrip < ../$mod_dir/vel02.su > vel0.bin
 
 #run FWI
 if [ $fwi -gt 0 ]; then
@@ -112,13 +114,13 @@ fi
 #convert files back to su
 echo  ----------------- Converting files to su -----------------
 python3 np2su.py $dir $fmin
-supaste < JMI+FWI-vel.bin ns=201 head=data.head > Results/$dir/$fmin-JMI+FWI-vel.su   
-supaste < FWIonly-vel.bin ns=201 head=data.head > Results/$dir/$fmin-FWIonly-vel.su   
+supaste < JMI+FWI-vel.bin ns=201 head=data.head > Results/$dir/vel0-final_vel_model.su   
+supaste < FWIonly-vel.bin ns=201 head=data.head > Results/$dir/jmi_vel-final_vel_model.su   
 
 #display FWI results
-cat  Results/$dir/vel0-final_vel_model.su  Results/$dir/jmi_vel-final_vel_model.su ../$mod_dir/vel0.su ../$mod_dir/truvel.su | \
+cat  Results/$dir/vel0-final_vel_model.su  Results/$dir/jmi_vel-final_vel_model.su ../$mod_dir/vel02.su ../$mod_dir/truvel2.su | \
 suwind key=duse max=1 dt=1 | \
-suximage wbox=2000 hbox=100 legend=1 cmap=hsv2 title="Velocity estimate comparaison : FWI only, JMI+FWI, starting velocity model and true velocity model" &
+suximage wbox=2000 hbox=200 legend=1 cmap=hsv2 title="Velocity estimate comparaison : FWI only, JMI+FWI, starting velocity model and true velocity model" &
 
 
 ############################## FWM ##################################
@@ -131,21 +133,19 @@ else
 echo  ----------------- Re-using FWM results -----------------
 fi
 
-# display the results
+# display FWM results
 base="Results/"
-cat $base"vel0-fwm-final inverted_image" $base"jmi_vel-fwm-final_inverted_image.su" | \
+cat $base"vel0-fwm_final_inverted_image" $base"jmi_vel-fwm_final_inverted_image.su" | \
 suwind key=duse max=1 dt=1 | \
-suximage wbox=700 hbox=400 perc=99 legend=1 title="FD data: FWM first and last iteration" &
-# misfit function
-#
-#cat $base"_misfit.su" | \
-#suxgraph style=normal width=800 height=400 x2beg=0 title="FD data: FWM misfit function" &
-#e
+suximage wbox=800 hbox=400 perc=99 legend=1 title="FD data: FWM first and last iteration" &
+
 else
 echo  ----------------- Not running inversion and migration -----------------
+./makeplots.sh $dir
 fi
 rm *.bin
 rm *tmp*.su
 rm data.head
+done
 exit
 

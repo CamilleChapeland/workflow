@@ -1,22 +1,22 @@
 #!/bin/bash
-dir=fugro_model
+dir=$1
 mod_dir=../Data/$dir
 base=Results/$dir
 
 #display JMI results
 cat $base/fd_jmi_final_inverted_velocity.su  $mod_dir/vel0.su $mod_dir/truvel.su | \
 suwind key=duse max=1 dt=1 | \
-suximage wbox=2000 hbox=100 legend=1 cmap=hsv2 title="Velocity estimate from JMI (left), starting model (middle) and true velocity model (right)" &
+suximage wbox=300 hbox=100 legend=1 cmap=hsv2 title="Velocity estimate from JMI (left), starting model (middle) and true velocity model (right)" &
 
 #MISFIT
 
 #display FWI results
-cat $base/vel0_final_vel_model.su  $base/jmi_vel_final_vel_model.su $mod_dir/vel0.su $mod_dir/truvel.su | \
+cat $base/vel0-final_vel_model.su  $base/jmi_vel-final_vel_model.su $mod_dir/vel0.su $mod_dir/truvel.su | \
 suwind key=duse max=1 dt=1 | \
-suximage wbox=2000 hbox=100 legend=1 cmap=hsv2 title="Velocity estimate comparaison : FWI only, JMI+FWI, starting velocity model and true velocity model" &
+suximage wbox=300 hbox=100 legend=1 cmap=hsv2 title="Velocity estimate comparaison : FWI only, JMI+FWI, starting velocity model and true velocity model" &
 
 # display FWM results
-cat $base/vel0-fwm_final inverted_image $base/jmi_vel-fwm_final_inverted_image.su | \
+cat $base/vel0-fwm_final_inverted_image.su $base/jmi_vel-fwm_final_inverted_image.su | \
 suwind key=duse max=1 dt=1 | \
 suximage wbox=700 hbox=400 perc=99 legend=1 title="FD data: FWM first and last iteration" &
 
