@@ -33,10 +33,10 @@ mkdir ../Data/$dir
 #####################################################################
 
 #pick whether to make synthetic subsurface model
-remodel=1
+remodel=0
 
 #pick whether to remake FDM data
-remakedata=1
+remakedata=0
 
 #pick whether to run the full workflow
 workflow=1

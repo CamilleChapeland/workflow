@@ -24,7 +24,7 @@ mpirun -n 24 jmi_2d_mpi \
     size_x=151 \
     size_xtap=75 \
     size_z=201 \
-    size_t=1500 \
+    size_t=2750 \
     size_src=151 \
     angle=80 \
     size_iter=10 \

@@ -14,8 +14,7 @@ nt=2750
 dt=0.00008
 xsrc1=0
 xsrc2=300
-#dxsrc=$3
-dxsrc=100
+dxsrc=$3
 dxrcv=$2
 rcv1=0
 rcv2=300
@@ -37,9 +36,7 @@ scale < ../$1/den.su a=0 b=1000 | $DELPHIROOT/bin/convert > ../$1/modelhom_ro.su
 
 j=1
 /bin/rm ../$1/data.su ../$1/sources.su
-
-for ((xsrc=$xsrc1;xsrc<$xsrc2;xsrc+=$dxsrc))
-do
+xsrc=0
 
 fdelmodc \
    ischeme=1 \
@@ -49,7 +46,8 @@ fdelmodc \
    file_rcv=../$1/shotsfd.su \
    tmod=0.22 \
    xsrc=$xsrc \
-   nshot=1 \
+   nshot=151 \
+   dxshot=$dxsrc \
    zrcv1=0 \
    zrcv2=0 \
    xrcv1=0 \
@@ -67,10 +65,11 @@ fdelmodc \
    file_src=../$1/wavelet_fdacmod.su \
    file_rcv=../$1/shotfdhom.su \
    tmod=0.22 \
-   nshot=1 \
+   nshot=151 \
    xsrc=$xsrc zsrc=0 \
    zrcv1=0 \
    zrcv2=0 \
+   dxshot=$dxsrc \
    xrcv1=0 \
    xrcv2=300 \
    dxrcv=2 \
@@ -86,8 +85,8 @@ fdelmodc \
    file_src=../$1/wavelet_fdacmod.su \
    file_rcv=../$1/shotfdhomdir.su \
    tmod=0.22 \
-   nshot=1 \
-   dxshot=2 \
+   nshot=151 \
+   dxshot=$dxsrc \
    xsrc=$xsrc \
    xrcv1=0 \
    xrcv2=300 \
@@ -100,26 +99,21 @@ fdelmodc \
    verbose=1 
 
 suop2 ../$1/shotsfd_rp.su ../$1/shotfdhom_rp.su| \
-sushw key=fldr a=$j verbose=1| \
-rotate trot=-$t0 updatehdr=0 verbose=1| \
-pad ntout=$nt verbose=1 > tmpdata.su
+rotate trot=-$t0 updatehdr=0| \
+pad ntout=$nt  > ../$1/data.su
 
-cat "tmpdata.su" >> ../$1/data.su
-suximage < ../$1/data.su 
+
+suwind < ../$1/data.su key=fldr | suximage\
 
 sumute < ../$1/shotfdhomdir_rp.su xmute=-280,0,280 tmute=0.22,0.07,0.22 \
    ntaper=10 mode=1 | sumute xmute=-300,0,300 tmute=0.22,0.015,0.22 \
    ntaper=10  > ../$1/shotfdhomdir.mute.su
 
 taper < ../$1/shotfdhomdir.mute.su nxtaper=10 ntaper=20 | \
-sushw key=fldr a=$j | \
 pad ntout=$nt | \
 taper ntaper=10 nxtaper=10 | \
 kxextrap dz=-40 c=1500 |\
 rotate trot=-$t0 updatehdr=0 >> ../$1/sources.su
 
-suximage < ../$1/sources.su
+suwind < ../$1/sources.su key=fldr | suximage\
 
-j=$((j+1))
-
-done

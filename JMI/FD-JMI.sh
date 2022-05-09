@@ -15,8 +15,8 @@ mpirun -n 12 jmi_2d_mpi \
     fmin=200 \
     fmax_lower=250 \
     fmax_upper=600\
-    operator_vmin=1300 \
-    operator_vmax=3000 \
+    operator_vmin=1000 \
+    operator_vmax=4000 \
     operator_dv=1 \
     dt=0.00008 \
     dx=2 \
@@ -24,7 +24,7 @@ mpirun -n 12 jmi_2d_mpi \
     size_x=151 \
     size_xtap=75 \
     size_z=201 \
-    size_t=1500 \
+    size_t=2750 \
     size_src=151 \
     angle=80 \
     size_iter=50,50,50,50,35,35,35,25,25,25\
