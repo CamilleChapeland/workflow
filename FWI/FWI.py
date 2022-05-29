@@ -14,13 +14,14 @@ parser.add_argument('min_freq', type=float)
 parser.add_argument('max_freq', type=float)
 parser.add_argument('dx', type=float)
 parser.add_argument('dz', type=float)
+parser.add_argument('nshots', type=int)
 args = parser.parse_args()
 
 ###################################################################
 ######################### MAKE PARAMETERS #########################
-nshots = 151  # Number of shots to create gradient from
-nreceivers = 151  # Number of receiver locations per shot
-fwi_iterations = 10  # Number of outer FWI iterations
+nshots = 101  # Number of shots to create gradient from
+nreceivers = nshots  # Number of receiver locations per shot
+fwi_iterations = 15  # Number of outer FWI iterations
 min_freq = args.min_freq
 max_freq = args.max_freq
 dx = args.dx
@@ -30,7 +31,7 @@ dz = args.dz
 ######################### MAKE MODEL #########################
 from examples.seismic import demo_model, Model, plot_velocity, plot_perturbation
 # Define true and initial model
-shape = (151, 201)  # Number of grid point (nx, nz)
+shape = (1001, 201)  # Number of grid point (nx, nz)
 spacing = (dx, dz)  # Grid spacing in m. The domain size is now 1km by 1km
 origin = (0., 0.)  # Need origin to define relative source and receiver locations
 
@@ -39,27 +40,23 @@ v = np.empty(shape, dtype=np.float32)
 JMI_v = np.empty(shape, dtype=np.float32)
 
 tru_vel = np.fromfile('truvel.bin', dtype=np.float32)
-tru_vel = np.reshape(tru_vel , (151,201))
+tru_vel = np.reshape(tru_vel , shape)
 v = tru_vel[:shape[0], :shape[1]]/1000
 
 start_model = np.fromfile('jmi_vel.bin', dtype=np.float32)
-start_model= np.reshape(start_model, (151,201))
+start_model= np.reshape(start_model, shape)
 JMI_v = start_model[:shape[0], :shape[1]]/1000
 
 # Make SeismicModel devito objects 
 model = Model(vp=v, origin=origin, shape=shape, spacing=spacing, nbl=75, space_order=2, bcs="mask")
 model0 = Model(vp=JMI_v, origin=origin, shape=shape, spacing=spacing, nbl=75, space_order=2, bcs="mask")
 
-# Plot the true model, the starting model and the difference
-#plot_velocity(model)
-#plot_velocity(model0)
-#plot_perturbation(model0, model)
 
 ###############################################################
 ######################### MAKE SOURCE #########################
 # Define source parameters
 t0 = 0.
-tn = 128. 
+tn = 200. 
 f0 = 0.2
 source_type = "Ricker"
 dt = model.critical_dt
@@ -86,11 +83,6 @@ from buttersrc import AcquisitionGeometry
 geometry = AcquisitionGeometry(model, rec_coordinates, source_locations, 
                 t0, tn, f0=f0, src_type="Butter", fs=fs, fc=fc)
 
-# Plot the time signature to see the wavelet
-#geometry.src.show()
-# Plot acquisition geometry
-#plot_velocity(model, source=geometry.src_positions,
-#              receiver=geometry.rec_positions)
 
 ##################################################################
 ######################### MAKE TRUE DATA #########################
@@ -101,22 +93,9 @@ from examples.seismic import plot_shotrecord
 solver = AcousticWaveSolver(model, geometry, space_order=4)
 true_d, _, _ = solver.forward(vp=model.vp)
 
-##                                                                       ##
-##                                                                       ##
-###########################################################################
-######################### FWI WITH JMI SM #################################
-###########################################################################
-##                                                                       ##  
-##                                                                       ##
 # Compute initial data with forward operator 
 smooth_d, _, _ = solver.forward(vp=model0.vp)
 
-# Plot shot record for true and smooth velocity model and the difference
-#plot_shotrecord(true_d.data, model, t0, tn)
-#plot_shotrecord(smooth_d.data, model, t0, tn)
-#plot_shotrecord(smooth_d.data - true_d.data, model, t0, tn)
-
-###########################################################################
 ######################### FWI GRADIENT PROCEDURES #########################
 from devito import Eq, Operator
 

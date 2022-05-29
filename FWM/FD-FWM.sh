@@ -1,7 +1,13 @@
 #!/bin/bash
-#dxrcv=$2
-#interpolate < Data/velsm.su d2out=$dxrcv verbose=1 | \
-#sushw key=gx a=0 b=$dxrcv | sushw key=offset a=0 b=$dxrcv | sushw key=scalco,trid a=0,30 > Data/vel_dxrcv.su
+xmin=$7
+xmax=$8
+dxrcv=$3
+
+xdif=`echo "$xmax-$xmin" | bc`
+nrcv=`echo "($xdif/2)+1" | bc`
+#nshots=`echo "$nrcv-2" |bc`
+nshots=$nrcv
+fmin_upper=`echo "$6+50" |bc`
 
 mpirun -n 24 jmi_2d_mpi \
     initial_velocity=Results/$2/$1-final_vel_model.su \
@@ -12,19 +18,19 @@ mpirun -n 24 jmi_2d_mpi \
     output_pershot_info=1 \
     output_residual_info=1 \
     if_model_mask=0 \
-    fmin=$5 \
-    fmax_lower=$7 \
-    fmax_upper=$6 \
+    fmin=$4 \
+    fmax_lower=$fmin_upper \
+    fmax_upper=$5 \
     operator_vmin=400 \
     operator_vmax=3000 \
     operator_dv=1 \
     dt=0.00008 \
     dx=$3 \
-    dz=$4 \
-    size_x=151 \
+    dz=0.4 \
+    size_x=$nrcv \
     size_xtap=75 \
     size_z=201 \
-    size_t=2750 \
+    size_t=2500 \
     size_src=151 \
     angle=80 \
     size_iter=10 \

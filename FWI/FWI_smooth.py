@@ -4,8 +4,11 @@ import matplotlib.pyplot as plt
 import matplotlib
 import devito
 from devito import configuration
-configuration['log-level'] = 'WARNING'
+#configuration['log-level'] = 'WARNING'
 import argparse
+
+#import warnings
+#warnings.filterwarnings("ignore")
 
 parser = argparse.ArgumentParser()
 parser.add_argument('starting_model', type=str)
@@ -14,12 +17,14 @@ parser.add_argument('min_freq', type=float)
 parser.add_argument('max_freq', type=float)
 parser.add_argument('dx', type=float)
 parser.add_argument('dz', type=float)
+parser.add_argument('nshots', type=int)
 args = parser.parse_args()
 
 ###################################################################
 ######################### MAKE PARAMETERS #########################
-nshots = 151  # Number of shots to create gradient from
-nreceivers = 151  # Number of receiver locations per shot
+nshots = args.nshots  # Number of shots to create gradient from
+#nshots = 2  # Number of shots to create gradient from
+nreceivers = nshots  # Number of receiver locations per shot
 fwi_iterations = 10  # Number of outer FWI iterations
 min_freq = args.min_freq
 max_freq = args.max_freq
@@ -39,34 +44,29 @@ v = np.empty(shape, dtype=np.float32)
 JMI_v = np.empty(shape, dtype=np.float32)
 smooth_v = np.empty(shape, dtype=np.float32)
 
-tru_vel = np.fromfile('truvel.bin', dtype=np.float32)
-tru_vel = np.reshape(tru_vel , (151,201))
+tru_vel = np.fromfile('Results/%s/truvel.bin'%args.rdir, dtype=np.float32)
+tru_vel = np.reshape(tru_vel , shape)
 v = tru_vel[:shape[0], :shape[1]]/1000
 
-start_modelsm = np.fromfile(args.starting_model+'.bin', dtype=np.float32)
-start_modelsm = np.reshape(start_modelsm, (151,201))
+start_modelsm = np.fromfile('Results/%s/%s.bin'%(args.rdir,args.starting_model), dtype=np.float32)
+start_modelsm = np.reshape(start_modelsm, shape)
 smooth_v = start_modelsm[:shape[0], :shape[1]]/1000
 
 # Make SeismicModel devito objects 
 model = Model(vp=v, origin=origin, shape=shape, spacing=spacing, nbl=75, space_order=2, bcs="mask")
 model0 = Model(vp=smooth_v, origin=origin, shape=shape, spacing=spacing, nbl=75, space_order=2, bcs="mask")
 
-# Plot the true model, the starting model and the difference
-#plot_velocity(model)
-#plot_velocity(model0)
-
 ###############################################################
 ######################### MAKE SOURCE #########################
 # Define source parameters
 t0 = 0.
-tn = 128. 
+tn = 200. 
 f0 = 0.2
 source_type = "Ricker"
 dt = model.critical_dt/1000
 a = 1
 fc = args.min_freq/1000
 fs = 1/dt
-print(dt)
 
 ############################################################################
 ######################### MAKE AQUISITION GEOMETRY #########################
@@ -87,35 +87,18 @@ from buttersrc import AcquisitionGeometry
 geometry = AcquisitionGeometry(model, rec_coordinates, source_locations, 
                 t0, tn, f0=f0, src_type="Butter", fs=fs, fc=fc)
 
-# Plot the time signature to see the wavelet
-#geometry.src.show()
-# Plot acquisition geometry
-#plot_velocity(model, source=geometry.src_positions,
-#              receiver=geometry.rec_positions)
-
 ##################################################################
 ######################### MAKE TRUE DATA #########################
 # Compute synthetic data with forward operator 
 from examples.seismic.acoustic import AcousticWaveSolver
-from examples.seismic import plot_shotrecord
-
 solver = AcousticWaveSolver(model, geometry, space_order=4)
-true_d, _, _ = solver.forward(vp=model.vp)
+
 ##                                                                       ##
 ##                                                                       ##
 ###########################################################################
 ######################### FWI WITH JMI SM #################################
 ###########################################################################
 ##                                                                       ##  
-##                                                                       ##
-# Compute initial data with forward operator 
-smooth_d, _, _ = solver.forward(vp=model0.vp)
-
-# Plot shot record for true and smooth velocity model and the difference
-#plot_shotrecord(true_d.data, model, t0, tn)
-#plot_shotrecord(smooth_d.data, model, t0, tn)
-#plot_shotrecord(smooth_d.data - true_d.data, model, t0, tn)
-
 ###########################################################################
 ######################### FWI GRADIENT PROCEDURES #########################
 from devito import Eq, Operator
@@ -157,12 +140,11 @@ def fwi_gradient(vp_in):
                      coordinates=geometry.rec_positions)
     objective = 0.
     for i in range(nshots):
+        print(i)        
         # Update source location
         geometry.src_positions[0, :] = source_locations[i, :]
-        
         # Generate synthetic data from true model
         _, _, _ = solver.forward(vp=model.vp, rec=d_obs)
-        
         # Compute smooth data and full forward wavefield u0
         _, u0, _ = solver.forward(vp=vp_in, save=True, rec=d_syn)
         

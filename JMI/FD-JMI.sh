@@ -1,5 +1,15 @@
-#!/bin/sh
+#!/bin/bash
 mkdir ../logs/$2/
+
+xmin=$7
+xmax=$8
+dxrcv=$3
+
+xdif=`echo "$xmax-$xmin" | bc`
+nrcv=`echo "($xdif/2)+1" | bc`
+#nshots=`echo "$nrcv-2" |bc`
+nshots=$nrcv
+fmin_upper=`echo "$6+50" |bc`
 
 # run the actual JMI
 mpirun -n 12 jmi_2d_mpi \
@@ -12,22 +22,22 @@ mpirun -n 12 jmi_2d_mpi \
     output_pershot_info=0 \
     output_residual_info=1 \
     if_model_mask=0 \
-    fmin=200 \
-    fmax_lower=250 \
-    fmax_upper=600\
+    fmin=$6 \
+    fmax_lower=$fmin_upper \
+    fmax_upper=$5\
     operator_vmin=1000 \
     operator_vmax=4000 \
     operator_dv=1 \
     dt=0.00008 \
-    dx=2 \
+    dx=$3 \
     dz=0.4 \
-    size_x=151 \
+    size_x=$nrcv \
     size_xtap=75 \
     size_z=201 \
-    size_t=2750 \
-    size_src=151 \
+    size_t=2500 \
+    size_src=$nshots \
     angle=80 \
-    size_iter=50,50,50,50,35,35,35,25,25,25\
+    size_iter=35,35,35,25,25,25,25,25,25,25\
     data_mask_type=1 \
     velocity_smooth_z=1 \
     velocity_smooth_x=11 \
