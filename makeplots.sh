@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #which plots would you like to make?
-jmi=1
+jmi=0
 fwi=1
 fwm=0
 true_model=0
@@ -18,10 +18,6 @@ if [ $jmi -gt 0 ]; then
 cat $base/fd_jmi_final_inverted_velocity.su  $base/jmi_vel-final_vel_model.su  $mod_dir/truvel2.su| \
 suwind key=duse max=1 dt=1 | \
 suximage n1=201 wbox=1200 hbox=400 legend=1 cmap=hsv2 title="Velocity estimate from JMI (left), FWI using JMI starting model (middle) and true velocity model (right)" &
-cat  $base/jmi_vel-final_vel_modeldx2.su $base/vel0-final_vel_modeldx2.su $mod_dir/truvel2.su | \
-suwind key=duse max=1 dt=1 | \
-suximage wbox=1200 hbox=400 legend=1 cmap=hsv2 title="Velocity estimate comparaison : FWI only, JMI+FWI, starting velocity model and true velocity model" &
-
 
 fi
 
@@ -31,7 +27,8 @@ if [ $fwi -gt 0 ]; then
 #suwind key=duse max=1 dt=1 | \
 #suximage wbox=1200 hbox=400 legend=1 cmap=hsv2 title="Velocity estimate comparaison : FWI only and JMI+FWI" &
 
-cat  $base/vel0-final_vel_model.su $base/jmi_vel-final_vel_model.su $mod_dir/truvel2.su | \
+#cat  $base/vel0-final_vel_model.su $base/jmi_vel-final_vel_model.su $mod_dir/truvel2.su | \
+cat $base/vel0-final_vel_model.su $base/jmi_vel-final_vel_model.su | \
 suwind key=duse max=1 dt=1 | \
 suximage wbox=1200 hbox=400 legend=1 cmap=hsv2 title="Velocity estimate comparaison : FWI only, JMI+FWI, starting velocity model and true velocity model" &
 
@@ -42,11 +39,11 @@ if [ $fwm -gt 0 ]; then
 #make true reflection image
 suprod $mod_dir/truvel2.su $mod_dir/den2.su | suop op=refl > $base/refl.su
 
-cat  $base/jmi_vel-fwm_final_inverted_image.su $base/vel0-fwm_final_inverted_image.su |
-suximage bclip=0.45 wclip=-0.45 wbox=1200 hbox=400 legend=1 title="Reflectivity using FWI-only background velocity and JMI+FWI background velocity" &
+cat $base/vel0-fwm_final_inverted_image.su  $base/jmi_vel-fwm_final_inverted_image.su |
+suximage bclip=0.49 wclip=-0.49 wbox=1200 hbox=400 legend=1 title="Reflectivity using FWI-only background velocity and JMI+FWI background velocity" &
 
 cat $base/refl.su |
-suximage bclip=0.45 wclip=-0.45 wbox=1200 hbox=400 legend=1 title="Reflectivity using FWI-only background velocity and JMI+FWI background velocity" &
+suximage bclip=0.49 wclip=-0.49 wbox=1200 hbox=400 legend=1 title="Reflectivity using FWI-only background velocity and JMI+FWI background velocity" &
 fi
 
 ###display true model
@@ -92,7 +89,7 @@ suop2 tmpdat.su tmpres1.su > tmpmod.su
 n2=`surange < tmpdat.su | head -1 | awk '{print $1}'`
 
 cat tmpdat.su tmpmod.su tmpres1.su | \
-suximage perc=99 width=900 height=600 title="1=$data 2=mod 3=$res"
+suximage width=900 height=600 title="1=$data 2=mod 3=$res"
 
 #JMI-FWI-FWM
 res=$base/jmi_vel-fwm_residual_imaging.su 
@@ -106,7 +103,7 @@ suop2 tmpdat.su tmpres2.su > tmpmod.su
 
 n2=`surange < tmpdat.su | head -1 | awk '{print $1}'`
 cat tmpdat.su tmpmod.su tmpres2.su | \
-suximage perc=99 width=900 height=600 title="1=$data 2=mod 3=$res"
+suximage width=900 height=600 title="1=$data 2=mod 3=$res"
 
 cat tmpres1.su tmpres2.su | \
 suximage perc=99.9 width=900 height=600 title="1=$data 2=mod 3=$res"

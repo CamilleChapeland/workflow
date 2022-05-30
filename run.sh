@@ -10,10 +10,10 @@ cd ../workflow
 #####################################################################
 
 #pick whether to make synthetic subsurface model
-remodel=0
+remodel=1
 
 #pick whether to remake FDM data
-remakedata=0
+remakedata=1
 
 #pick whether to run the full workflow
 workflow=1
@@ -33,8 +33,8 @@ fwm=1
 #pick variables
 dx=0.4
 dz=0.4
-xmin=100
-xmax=400
+xmin=700
+xmax=1000
 nshots=151
 dxrcv=2
 dxsrc=2
@@ -44,7 +44,7 @@ fmax=600
 
 #pick subsurface model to run
 #the model executables must be stored in the ../models/ directory 
-for dir in smallboulders
+for dir in surface_mult
 do
 echo ==================== MODEL $dir =========================
 
